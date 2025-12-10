@@ -1,0 +1,37 @@
+[package]
+name = "agent"
+version = "2.0.0"
+edition = "2021"
+
+[[bin]]
+name = "agent"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+screenshots = "0.6"
+base64 = "0.21"
+sysinfo = "0.31"
+nokhwa = { version = "0.10", features = ["input-native"] }
+image = "0.24"
+tokio-tungstenite = "0.21"
+futures-util = "0.3"
+enigo = "0.2"  # ← Add this for mouse/keyboard control
+chrono = "0.4"  # ← Add this for logging
+rdev = "0.5"  # ← Add this for drawing overlays on screen
+lazy_static = "1.4"
+zip = "0.6"
+walkdir = "2.4"
+cpal = "0.15"  # Cross-platform audio library
+hound = "3.5"  # WAV file encoding
+winreg = "0.52"  # Already present
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = 'abort'
+strip = true

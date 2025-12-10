@@ -1,0 +1,24 @@
+# Rust
+/target
+Cargo.lock
+*.pdb
+
+# Generated files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+stream_frames/
+remote_control.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
